@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palestine</title> 
+    <style>
+        body {
+            margin: 0;
+            font-family: 'FancyFont', sans-serif; /* CSS style for the entire page */
+            display: flex;
+        }
+
+        .side-nav {
+            background-color: #3b0101; 
+            color: #fff; 
+            width: 0; 
+            height: 100vh; 
+            position: fixed; /* Fixed position for the side navigation */
+            transition: 0.3s; /* Smooth transition effect for opening/closing the navigation */
+            overflow-x: hidden; /* Hide horizontal scrollbar in the side navigation */
+        }
+
+        .side-nav.active {
+            width: 150px; /* Width of the side navigation when it's active (visible) */
+        }
+
+        .side-nav ul {
+            list-style: none; /* Remove bullet points from the list */
+            padding: 0; /* Remove default padding from the list */
+        }
+
+        .side-nav li {
+            margin: 0; /* Remove default margin from list items */
+        }
+
+        .side-nav a {
+            display: block; 
+            padding: 20px; 
+            text-decoration: none; 
+            color: #fff; 
+            transition: 0.3s; 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .side-nav a:hover {
+            background-color: #555; 
+        }
+
+        .icon {
+            margin-right: 10px; /* Add margin to the right of icons */
+        }
+
+        .center-button {
+            position: fixed; /* Fixed position for the center button */
+            top: 50%; /* Position the button vertically at 50% from the top */
+            left: 0; /* Initial left position of the button */
+            transform: translateY(-50%); /* Center the button vertically */
+        }
+
+        .center-button button {
+            background-color: #000000; 
+            color: #fff; 
+            border: none; 
+            font-size: 20px; 
+            padding: 5px 7px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+
+        .center-button button:hover {
+            background-color: #007038; /* Background color when hovering over the button */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to include the Font Awesome icons library -->
+</head>
+<body>
+    <nav class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="#tab1"><i class="fas fa-home"></i>  Home</a></li>
+            <li><a href="#tab2"><i class="fas fa-file-alt"></i>  Paper</a></li>
+            <li><a href="#tab3"><i class="fas fa-hand-rock"></i>  Rock</a></li>
+            <li><a href="#tab4"><i class="fas fa-exclamation-triangle"></i>  Mark</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <section id="tab1">
+            <h1>Palestine</h1> 
+            <p>Welcome to the Home tab. This is where you can learn more about Palestine.</p>
+        </section>
+        <section id="tab2">
+            <h1>History</h1> 
+            <p>Welcome to the History tab. This is where you can read about Palestine's history.</p>
+        </section>
+        <section id="tab3">
+            <h1>SAMDOON</h1> 
+            <p>Welcome to the SAMDOON tab. Will take about how much Palestinian people suffers and what they do to survive, "and how much they steadfast and that's what SAMDOON means".</p>
+        </section>
+        <section id="tab4">
+            <h1>More</h1> 
+            <p>Welcome to the More tab. All other information you find it here.</p>
+        </section>
+    </main>
+    <div class="center-button" id="openbar">
+        <button>☰</button> <!-- Center button to open the side navigation -->
+    </div>
+    <script>
+        const sideNav = document.getElementById('sideNav');
+        const openbarButton = document.getElementById('openbar');
+    
+        // Show sidebar when the center button is clicked
+        openbarButton.addEventListener('click', function() {
+            sideNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
